@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -227,3 +228,44 @@
     <label><input type="checkbox" value="stretch"> Stretch and breathe deeply</label><br>
   </form>
 </details>
+<script>
+  function saveCheckboxState(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        localStorage.setItem(`${formId}-${cb.value}`, cb.checked);
+      });
+      const saved = localStorage.getItem(`${formId}-${cb.value}`);
+      if (saved !== null) cb.checked = saved === 'true';
+    });
+  }
+
+  // Week 1
+  saveCheckboxState('week1-mondayForm');
+  saveCheckboxState('week1-tuesdayForm');
+  saveCheckboxState('week1-wednesdayForm');
+  saveCheckboxState('week1-thursdayForm');
+  saveCheckboxState('week1-fridayForm');
+  saveCheckboxState('week1-saturdayForm');
+  saveCheckboxState('week1-sundayForm');
+
+  // Week 2
+  saveCheckboxState('week2-mondayForm');
+  saveCheckboxState('week2-tuesdayForm');
+  saveCheckboxState('week2-wednesdayForm');
+  saveCheckboxState('week2-thursdayForm');
+  saveCheckboxState('week2-fridayForm');
+  saveCheckboxState('week2-saturdayForm');
+  saveCheckboxState('week2-sundayForm');
+
+  // Week 3
+  saveCheckboxState('week3-mondayForm');
+  saveCheckboxState('week3-tuesdayForm');
+  saveCheckboxState('week3-wednesdayForm');
+  saveCheckboxState('week3-thursdayForm');
+  saveCheckboxState('week3-fridayForm');
+  saveCheckboxState('week3-saturdayForm');
+  saveCheckboxState('week3-sundayForm');
+</script>
