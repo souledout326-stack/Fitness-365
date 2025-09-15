@@ -121,3 +121,9 @@ input[type="checkbox"] {
     padding: 10px;
   }
 }
+.phase-buttons button.active-phase {
+  background-color: #28a745; /* Green for active */
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
