@@ -14,6 +14,17 @@
     <p>Daily workouts for body and soul</p>
   </header>
 
+  <h2>Choose Your Phase</h2>
+<select id="phaseSelector">
+  <option value="phase1">🏁 Phase 1: Foundation & Fat Burn</option>
+  <option value="phase2">🧗 Phase 2: Strength & Skill</option>
+  <option value="phase3">🧠 Phase 3: Calisthenics Progression</option>
+</select>
+
+  <div id="phase1" class="phase-group">
+    <!-- Paste Weeks 1–4 here -->
+  </div>
+
 <!-- WEEK 1 -->
 <section class="phase">
   <h2>🏁 Phase 1: Foundation & Fat Burn (Week 1)</h2>
@@ -295,6 +306,10 @@
   </details>
 </section>
 
+  <div id="phase2" class="phase-group" style="display:none;">
+    <!-- Paste Weeks 5–8 here -->
+  </div>
+
   <section class="phase">
   <h2>🧗 Phase 2: Strength & Skill (Week 5)</h2>
   <p><strong>Goal:</strong> Build foundational strength and introduce calisthenics control.</p>
@@ -571,6 +586,10 @@
     </form>
   </details>
 </section>
+  
+<div id="phase3" class="phase-group" style="display:none;">
+    <!-- Paste Weeks 9–12 here -->
+  </div>
 
   <section class="phase">
   <h2>🧠 Phase 3: Calisthenics Progression (Week 9)</h2>
@@ -855,7 +874,21 @@
       if (saved !== null) cb.checked = saved === 'true';
     });
   }
+<script>
+  const selector = document.getElementById('phaseSelector');
+  const groups = {
+    phase1: document.getElementById('phase1'),
+    phase2: document.getElementById('phase2'),
+    phase3: document.getElementById('phase3')
+  };
 
+  selector.addEventListener('change', () => {
+    const selected = selector.value;
+    Object.keys(groups).forEach(key => {
+      groups[key].style.display = key === selected ? 'block' : 'none';
+    });
+  });
+</script>
   // Week 1
   saveCheckboxState('week1-mondayForm');
   saveCheckboxState('week1-tuesdayForm');
