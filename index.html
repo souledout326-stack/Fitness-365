@@ -14,14 +14,14 @@
     <p>Daily workouts for body and soul</p>
   </header>
 
-  <h2>Choose Your Phase</h2>
-<select id="phaseSelector">
-  <option value="phase1">🏁 Phase 1: Foundation & Fat Burn</option>
-  <option value="phase2">🧗 Phase 2: Strength & Skill</option>
-  <option value="phase3">🧠 Phase 3: Calisthenics Progression</option>
-</select>
+ <h2>Choose Your Phase</h2>
+<div class="phase-buttons">
+  <button onclick="togglePhase('phase1')">🏁 Phase 1</button>
+  <button onclick="togglePhase('phase2')">🧗 Phase 2</button>
+  <button onclick="togglePhase('phase3')">🧠 Phase 3</button>
+</div>
 
-  <div id="phase1" class="phase-group">
+  <div id="phase1" class="phase-group" style="display:none;">
     <!-- Paste Weeks 1–4 here -->
 <!-- WEEK 1 -->
 <section class="phase">
