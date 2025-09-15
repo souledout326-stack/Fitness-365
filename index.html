@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -228,19 +227,7 @@
     <label><input type="checkbox" value="stretch"> Stretch and breathe deeply</label><br>
   </form>
 </details>
-<script>
-  function saveCheckboxState(formId) {
-    const form = document.getElementById(formId);
-    if (!form) return;
-    const checkboxes = form.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', () => {
-        localStorage.setItem(`${formId}-${cb.value}`, cb.checked);
-      });
-      const saved = localStorage.getItem(`${formId}-${cb.value}`);
-      if (saved !== null) cb.checked = saved === 'true';
-    });
-  }
+
 <section class="phase">
   <h2>🏁 Phase 1: Foundation & Fat Burn (Week 4)</h2>
   <p><strong>Goal:</strong> Solidify endurance, improve recovery, and prep for strength phase.</p>
@@ -897,20 +884,7 @@
   saveCheckboxState('week3-fridayForm');
   saveCheckboxState('week3-saturdayForm');
   saveCheckboxState('week3-sundayForm');
-  <script>
-  function saveCheckboxState(formId) {
-    const form = document.getElementById(formId);
-    if (!form) return;
-    const checkboxes = form.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', () => {
-        localStorage.setItem(`${formId}-${cb.value}`, cb.checked);
-      });
-      const saved = localStorage.getItem(`${formId}-${cb.value}`);
-      if (saved !== null) cb.checked = saved === 'true';
-    });
-  }
-
+ 
   // Week 4
   saveCheckboxState('week4-mondayForm');
   saveCheckboxState('week4-tuesdayForm');
