@@ -869,8 +869,7 @@
       const saved = localStorage.getItem(`${formId}-${cb.value}`);
       if (saved !== null) cb.checked = saved === 'true';
     });
-  }
-<script>
+  } 
   const selector = document.getElementById('phaseSelector');
   const groups = {
     phase1: document.getElementById('phase1'),
@@ -884,7 +883,7 @@
       groups[key].style.display = key === selected ? 'block' : 'none';
     });
   });
-</script>
+
   // Week 1
   saveCheckboxState('week1-mondayForm');
   saveCheckboxState('week1-tuesdayForm');
