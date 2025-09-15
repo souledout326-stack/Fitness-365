@@ -842,16 +842,20 @@
     </form>
   </details>
 
-  <details>
-    <summary>Sunday – Celebration & Reflection</summary>
-    <form id="week12-sundayForm">
-      <label><input type="checkbox" value="reflect"> Reflect on your 12-week journey</label><br>
-      <label><input type="checkbox" value="journal"> Journal your physical and spiritual growth</label><br>
-      <label><input type="checkbox" value="pray"> Prayer of gratitude and renewal</label><br>
-    </form>
-  </details>
-</section>
-  
+<script>
+  function saveCheckboxState(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        localStorage.setItem(`${formId}-${cb.value}`, cb.checked);
+      });
+      const saved = localStorage.getItem(`${formId}-${cb.value}`);
+      if (saved !== null) cb.checked = saved === 'true';
+    });
+  }
+
   // Week 1
   saveCheckboxState('week1-mondayForm');
   saveCheckboxState('week1-tuesdayForm');
@@ -878,7 +882,7 @@
   saveCheckboxState('week3-fridayForm');
   saveCheckboxState('week3-saturdayForm');
   saveCheckboxState('week3-sundayForm');
- 
+
   // Week 4
   saveCheckboxState('week4-mondayForm');
   saveCheckboxState('week4-tuesdayForm');
