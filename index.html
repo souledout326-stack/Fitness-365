@@ -894,4 +894,9 @@
       saveCheckboxState(`week${week}-${day}Form`);
     });
   }
+ function togglePhase(phaseId) {
+  const phase = document.getElementById(phaseId);
+  if (!phase) return;
+  phase.style.display = phase.style.display === 'none' ? 'block' : 'none';
+}
 </script>
