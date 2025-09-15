@@ -887,108 +887,11 @@
     });
   });
 
-  // ✅ Checkbox tracking for Week 1–4
-  saveCheckboxState('week1-mondayForm');
-  saveCheckboxState('week1-tuesdayForm');
-  saveCheckboxState('week1-wednesdayForm');
-  saveCheckboxState('week1-thursdayForm');
-  saveCheckboxState('week1-fridayForm');
-  saveCheckboxState('week1-saturdayForm');
-  saveCheckboxState('week1-sundayForm');
-
-  saveCheckboxState('week2-mondayForm');
-  saveCheckboxState('week2-tuesdayForm');
-  saveCheckboxState('week2-wednesdayForm');
-  saveCheckboxState('week2-thursdayForm');
-  saveCheckboxState('week2-fridayForm');
-  saveCheckboxState('week2-saturdayForm');
-  saveCheckboxState('week2-sundayForm');
-
-  saveCheckboxState('week3-mondayForm');
-  saveCheckboxState('week3-tuesdayForm');
-  saveCheckboxState('week3-wednesdayForm');
-  saveCheckboxState('week3-thursdayForm');
-  saveCheckboxState('week3-fridayForm');
-  saveCheckboxState('week3-saturdayForm');
-  saveCheckboxState('week3-sundayForm');
-
-  saveCheckboxState('week4-mondayForm');
-  saveCheckboxState('week4-tuesdayForm');
-  saveCheckboxState('week4-wednesdayForm');
-  saveCheckboxState('week4-thursdayForm');
-  saveCheckboxState('week4-fridayForm');
-  saveCheckboxState('week4-saturdayForm');
-  saveCheckboxState('week4-sundayForm');
-</script>
-  // Week 5
-  saveCheckboxState('week5-mondayForm');
-  saveCheckboxState('week5-tuesdayForm');
-  saveCheckboxState('week5-wednesdayForm');
-  saveCheckboxState('week5-thursdayForm');
-  saveCheckboxState('week5-fridayForm');
-  saveCheckboxState('week5-saturdayForm');
-  saveCheckboxState('week5-sundayForm');
-
-  // Week 6
-  saveCheckboxState('week6-mondayForm');
-  saveCheckboxState('week6-tuesdayForm');
-  saveCheckboxState('week6-wednesdayForm');
-  saveCheckboxState('week6-thursdayForm');
-  saveCheckboxState('week6-fridayForm');
-  saveCheckboxState('week6-saturdayForm');
-  saveCheckboxState('week6-sundayForm');
-
-  // Week 7
-  saveCheckboxState('week7-mondayForm');
-  saveCheckboxState('week7-tuesdayForm');
-  saveCheckboxState('week7-wednesdayForm');
-  saveCheckboxState('week7-thursdayForm');
-  saveCheckboxState('week7-fridayForm');
-  saveCheckboxState('week7-saturdayForm');
-  saveCheckboxState('week7-sundayForm');
-
-  // Week 8
-  saveCheckboxState('week8-mondayForm');
-  saveCheckboxState('week8-tuesdayForm');
-  saveCheckboxState('week8-wednesdayForm');
-  saveCheckboxState('week8-thursdayForm');
-  saveCheckboxState('week8-fridayForm');
-  saveCheckboxState('week8-saturdayForm');
-  saveCheckboxState('week8-sundayForm');
-
-  // Week 9
-  saveCheckboxState('week9-mondayForm');
-  saveCheckboxState('week9-tuesdayForm');
-  saveCheckboxState('week9-wednesdayForm');
-  saveCheckboxState('week9-thursdayForm');
-  saveCheckboxState('week9-fridayForm');
-  saveCheckboxState('week9-saturdayForm');
-  saveCheckboxState('week9-sundayForm');
-
-  // Week 10
-  saveCheckboxState('week10-mondayForm');
-  saveCheckboxState('week10-tuesdayForm');
-  saveCheckboxState('week10-wednesdayForm');
-  saveCheckboxState('week10-thursdayForm');
-  saveCheckboxState('week10-fridayForm');
-  saveCheckboxState('week10-saturdayForm');
-  saveCheckboxState('week10-sundayForm');
-
-  // Week 11
-  saveCheckboxState('week11-mondayForm');
-  saveCheckboxState('week11-tuesdayForm');
-  saveCheckboxState('week11-wednesdayForm');
-  saveCheckboxState('week11-thursdayForm');
-  saveCheckboxState('week11-fridayForm');
-  saveCheckboxState('week11-saturdayForm');
-  saveCheckboxState('week11-sundayForm');
-
-  // Week 12
-  saveCheckboxState('week12-mondayForm');
-  saveCheckboxState('week12-tuesdayForm');
-  saveCheckboxState('week12-wednesdayForm');
-  saveCheckboxState('week12-thursdayForm');
-  saveCheckboxState('week12-fridayForm');
-  saveCheckboxState('week12-saturdayForm');
-  saveCheckboxState('week12-sundayForm');
+  // ✅ Checkbox tracking for Weeks 1–12
+  for (let week = 1; week <= 12; week++) {
+    const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+    days.forEach(day => {
+      saveCheckboxState(`week${week}-${day}Form`);
+    });
+  }
 </script>
