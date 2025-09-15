@@ -858,6 +858,7 @@
   </details>
  </div>
 <script>
+  // ✅ Checkbox tracking function
   function saveCheckboxState(formId) {
     const form = document.getElementById(formId);
     if (!form) return;
@@ -869,7 +870,9 @@
       const saved = localStorage.getItem(`${formId}-${cb.value}`);
       if (saved !== null) cb.checked = saved === 'true';
     });
-  } 
+  }
+
+  // ✅ Phase switching logic
   const selector = document.getElementById('phaseSelector');
   const groups = {
     phase1: document.getElementById('phase1'),
@@ -884,7 +887,7 @@
     });
   });
 
-  // Week 1
+  // ✅ Checkbox tracking for Week 1–4
   saveCheckboxState('week1-mondayForm');
   saveCheckboxState('week1-tuesdayForm');
   saveCheckboxState('week1-wednesdayForm');
@@ -893,7 +896,6 @@
   saveCheckboxState('week1-saturdayForm');
   saveCheckboxState('week1-sundayForm');
 
-  // Week 2
   saveCheckboxState('week2-mondayForm');
   saveCheckboxState('week2-tuesdayForm');
   saveCheckboxState('week2-wednesdayForm');
@@ -902,7 +904,6 @@
   saveCheckboxState('week2-saturdayForm');
   saveCheckboxState('week2-sundayForm');
 
-  // Week 3
   saveCheckboxState('week3-mondayForm');
   saveCheckboxState('week3-tuesdayForm');
   saveCheckboxState('week3-wednesdayForm');
@@ -911,7 +912,6 @@
   saveCheckboxState('week3-saturdayForm');
   saveCheckboxState('week3-sundayForm');
 
-  // Week 4
   saveCheckboxState('week4-mondayForm');
   saveCheckboxState('week4-tuesdayForm');
   saveCheckboxState('week4-wednesdayForm');
@@ -919,7 +919,7 @@
   saveCheckboxState('week4-fridayForm');
   saveCheckboxState('week4-saturdayForm');
   saveCheckboxState('week4-sundayForm');
-
+</script>
   // Week 5
   saveCheckboxState('week5-mondayForm');
   saveCheckboxState('week5-tuesdayForm');
