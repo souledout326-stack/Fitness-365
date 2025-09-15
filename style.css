@@ -46,3 +46,22 @@ th {
 .phase {
   margin-bottom: 30px;
 }
+.phase-buttons {
+  margin: 20px 0;
+}
+.phase-buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 6px;
+}
+.phase-buttons button:hover {
+  background-color: #666;
+}
+.phase-group {
+  margin-top: 20px;
+}
