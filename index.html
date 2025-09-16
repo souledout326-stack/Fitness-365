@@ -893,6 +893,41 @@
   </details>
  </div>
 <script>
+  <script>
+    function togglePhase(phaseId) {
+      const phase = document.getElementById(phaseId);
+      const button = document.querySelector(`button[onclick="togglePhase('${phaseId}')"]`);
+
+      if (!phase || !button) return;
+
+      const isVisible = phase.style.display === 'block';
+
+      // Toggle visibility
+      phase.style.display = isVisible ? 'none' : 'block';
+
+      // Toggle active class for styling
+      button.classList.toggle('active-phase', !isVisible);
+    }
+
+    function saveCheckboxState(formId) {
+      const form = document.getElementById(formId);
+      if (!form) return;
+      const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          localStorage.setItem(`${formId}-${cb.value}`, cb.checked);
+        });
+        const saved = localStorage.getItem(`${formId}-${cb.value}`);
+        if (saved !== null) cb.checked = saved === 'true';
+      });
+    }
+
+    // Track checkboxes for the sample weeks
+    saveCheckboxState('week1-mondayForm');
+    saveCheckboxState('week5-mondayForm');
+    saveCheckboxState('week9-mondayForm');
+  </script>
+
   // ✅ Checkbox tracking function
   function saveCheckboxState(formId) {
     const form = document.getElementById(formId);
