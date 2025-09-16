@@ -891,44 +891,25 @@
       <label><input type="checkbox" value="planks"> Plank Variations</label><br>
     </form>
   </details>
- 
+  </div>
 
-    function togglePhase(phaseId) {
-      const phase = document.getElementById(phaseId);
-      const button = document.querySelector(`button[onclick="togglePhase('${phaseId}')"]`);
 
-      if (!phase || !button) return;
+<script>
+  function togglePhase(phaseId) {
+    const phase = document.getElementById(phaseId);
+    const button = document.querySelector(`button[onclick="togglePhase('${phaseId}')"]`);
 
-      const isVisible = phase.style.display === 'block';
+    if (!phase || !button) return;
 
-      // Toggle visibility
-      phase.style.display = isVisible ? 'none' : 'block';
+    const isVisible = phase.style.display === 'block';
 
-      // Toggle active class for styling
-      button.classList.toggle('active-phase', !isVisible);
-    }
+    // Toggle visibility
+    phase.style.display = isVisible ? 'none' : 'block';
 
-    function saveCheckboxState(formId) {
-      const form = document.getElementById(formId);
-      if (!form) return;
-      const checkboxes = form.querySelectorAll('input[type="checkbox"]');
-      checkboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-          localStorage.setItem(`${formId}-${cb.value}`, cb.checked);
-        });
-        const saved = localStorage.getItem(`${formId}-${cb.value}`);
-        if (saved !== null) cb.checked = saved === 'true';
-      });
-    }
+    // Toggle active class for styling
+    button.classList.toggle('active-phase', !isVisible);
+  }
 
-    // Track checkboxes for the sample weeks
-    saveCheckboxState('week1-mondayForm');
-    saveCheckboxState('week5-mondayForm');
-    saveCheckboxState('week9-mondayForm');
- </div>
-
-</script>
-  // ✅ Checkbox tracking function
   function saveCheckboxState(formId) {
     const form = document.getElementById(formId);
     if (!form) return;
@@ -950,3 +931,4 @@
     });
   }
 </script>
+
