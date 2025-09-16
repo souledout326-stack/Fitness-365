@@ -941,21 +941,6 @@
     });
   }
 
-  // ✅ Phase switching logic
-  const selector = document.getElementById('phaseSelector');
-  const groups = {
-    phase1: document.getElementById('phase1'),
-    phase2: document.getElementById('phase2'),
-    phase3: document.getElementById('phase3')
-  };
-
-  selector.addEventListener('change', () => {
-    const selected = selector.value;
-    Object.keys(groups).forEach(key => {
-      groups[key].style.display = key === selected ? 'block' : 'none';
-    });
-  });
-
   // ✅ Checkbox tracking for Weeks 1–12
   for (let week = 1; week <= 12; week++) {
     const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
